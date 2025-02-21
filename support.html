@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Support | Nepali Land Converter</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+    <link href="https://ai-public.creatie.ai/gen_page/tailwind-custom.css" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com/3.4.5?plugins=forms@0.5.7,typography@0.5.13,aspect-ratio@0.4.2,container-queries@0.1.1"></script>
+    <script src="https://ai-public.creatie.ai/gen_page/tailwind-config.min.js" data-color="#000000" data-border-radius="medium"></script>
+    <link rel="icon" type="image/png" href="measure.png"/>
+    <style>
+        /* Hide scrollbar for Chrome, Safari, IE, Edge, and Firefox */
+        body::-webkit-scrollbar { display: none; }
+        body { -ms-overflow-style: none; scrollbar-width: none; }
+        .text-custom {
+            color: rgb(75, 85, 99);
+        }
+        .bg-custom {
+            background-color: rgb(75, 85, 99);
+        }
+        .rounded-button {
+            background-color: rgb(75, 85, 99);
+            color: white;
+        }
+        .text-gray-400:hover {
+            color: rgb(75, 85, 99);
+        }
+        .section-blur {
+            backdrop-filter: blur(8px);
+            background-color: rgba(75, 85, 99, 0.02);
+            border: 1px solid rgba(75, 85, 99, 0.1);
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .float-animation {
+            animation: float 2s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <nav class="bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center justify-start w-1/3">
+                    <a href="index.html">
+                        <img src="measure.png" alt="Logo" class="h-10 w-auto"/>
+                    </a>
+                </div>
+                <div class="flex items-center justify-center w-2/3 space-x-6">
+                    <a href="index.html" class="text-custom hover:text-custom/80 font-bold">Home</a>
+                    <div class="relative inline-block">
+                        <button onclick="toggleToolsMenu()" class="text-custom hover:text-custom/80 flex items-center space-x-1 font-bold">
+                            Tools <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </button>
+                        <div id="toolsMenu" class="hidden absolute mt-2 w-64 bg-white border border-gray-200 rounded-lg shadow-lg z-50 left-1/2 -translate-x-1/2">
+                            <div class="grid grid-cols-2 gap-2 p-4">
+                                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-50">
+                                    <i class="fas fa-calculator text-custom mr-3"></i>
+                                    <div>
+                                        <div class="font-medium">Area Calculator</div>
+                                        <div class="text-sm text-gray-500">Calculate land area</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-50">
+                                    <i class="fas fa-exchange-alt text-custom mr-3"></i>
+                                    <div>
+                                        <div class="font-medium">Unit Converter</div>
+                                        <div class="text-sm text-gray-500">Convert between units</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-50">
+                                    <i class="fas fa-map-marker-alt text-custom mr-3"></i>
+                                    <div>
+                                        <div class="font-medium">GPS Mapping</div>
+                                        <div class="text-sm text-gray-500">Map with GPS</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-50">
+                                    <i class="fas fa-ruler text-custom mr-3"></i>
+                                    <div>
+                                        <div class="font-medium">Length Calculator</div>
+                                        <div class="text-sm text-gray-500">Measure distances</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-50">
+                                    <i class="fas fa-draw-polygon text-custom mr-3"></i>
+                                    <div>
+                                        <div class="font-medium">Plot Divider</div>
+                                        <div class="text-sm text-gray-500">Divide land plots</div>
+                                    </div>
+                                </a>
+                                <a href="#" class="flex items-center p-3 rounded-lg hover:bg-gray-50">
+                                    <i class="fas fa-compass text-custom mr-3"></i>
+                                    <div>
+                                        <div class="font-medium">Surveyor Tools</div>
+                                        <div class="text-sm text-gray-500">Professional tools</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="contactus.html" class="text-custom hover:text-custom/80 font-bold">Contact Us</a>
+                    <a href="blogs.html" class="text-custom hover:text-custom/80 font-bold">Blog</a>
+                </div>
+                <div class="hidden lg:flex items-center justify-end space-x-4 w-1/3">
+                    <div class="relative">
+                        <input type="search" placeholder="Search..." class="form-input rounded-md border-gray-300 pl-10 pr-4 py-2 text-sm w-48"/>
+                        <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    </div>
+                    <select class="form-select border-gray-300 rounded-md text-sm">
+                        <option>English</option>
+                        <option>नेपाली</option>
+                    </select>
+                    <button class="p-2 text-gray-500 hover:text-custom">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div class="bg-white rounded-lg shadow-lg backdrop-blur-sm p-8 mb-12 section-blur">
+            <h1 class="text-3xl font-bold text-center text-custom mb-4">Support Center</h1>
+            <p class="text-center text-gray-600 mb-8">We're here to help you with any questions or issues you may have.</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- FAQ Section -->
+                <div class="space-y-6">
+                    <h2 class="text-xl font-semibold text-custom mb-4">Frequently Asked Questions</h2>
+                    <div class="space-y-4">
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <h3 class="font-medium text-custom">How do I use the converter?</h3>
+                            <p class="text-gray-600 mt-2">Simply select your input unit, output unit, enter the value, and click convert.</p>
+                        </div>
+                        <div class="border border-gray-200 rounded-lg p-4">
+                            <h3 class="font-medium text-custom">Are the conversions accurate?</h3>
+                            <p class="text-gray-600 mt-2">Yes, our conversions are based on standard Nepali land measurement units.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <h2 class="text-xl font-semibold text-custom mb-4">Contact Support</h2>
+                    <form class="space-y-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" class="form-input w-full rounded-md border-gray-300"/>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" class="form-input w-full rounded-md border-gray-300"/>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Issue Type</label>
+                            <select class="form-select w-full rounded-md border-gray-300">
+                                <option>Technical Problem</option>
+                                <option>Conversion Issue</option>
+                                <option>Feature Request</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea rows="4" class="form-textarea w-full rounded-md border-gray-300"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-custom text-white font-medium py-2 px-4 rounded-md hover:bg-custom/90">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-sm font-semibold text-custom uppercase tracking-wider mb-4">About Us</h3>
+                    <p class="text-gray-600 text-sm mb-4">Your trusted tool for accurate land unit conversions.</p>
+                    <div class="flex space-x-4">
+                        <a href="https://facebook.com/notreachedyet" class="text-gray-400 hover:text-custom"><i class="fab fa-facebook text-xl"></i></a>
+                        <a href="https://twitter.com/notreachedyet" class="text-gray-400 hover:text-custom"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="https://instagram.com/notreachedyet" class="text-gray-400 hover:text-custom"><i class="fab fa-instagram text-xl"></i></a>
+                        <a href="https://linkedin.com/in/notreachedyet" class="text-gray-400 hover:text-custom"><i class="fab fa-linkedin text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-custom uppercase tracking-wider mb-4">Legal</h3>
+                    <ul class="space-y-2">
+                        <li><a href="tc.html" class="text-gray-600 hover:text-custom text-sm">Terms & Conditions</a></li>
+                        <li><a href="policy.html" class="text-gray-600 hover:text-custom text-sm">Privacy Policy</a></li>
+                        <li><a href="cookie.html" class="text-gray-600 hover:text-custom text-sm">Cookie Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-custom uppercase tracking-wider mb-4">Help</h3>
+                    <ul class="space-y-2">
+                        <li><a href="contactus.html" class="text-gray-600 hover:text-custom text-sm">Contact Us</a></li>
+                        <li><a href="faq.html" class="text-gray-600 hover:text-custom text-sm">FAQs</a></li>
+                        <li><a href="support.html" class="text-gray-600 hover:text-custom text-sm">Support</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-sm font-semibold text-custom uppercase tracking-wider mb-4">Tools</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-600 hover:text-custom text-sm">Area Calculator</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-custom text-sm">Unit Converter</a></li>
+                        <li><a href="#" class="text-gray-600 hover:text-custom text-sm">GPS Mapping</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-200 text-center">
+                <p class="text-gray-400 text-sm">© 2025 Nepali Land Converter. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Icon -->
+    <div class="fixed bottom-8 right-8 z-50">
+        <a href="https://wa.me/9779842835276" target="_blank" class="flex items-center justify-center w-16 h-16 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors">
+            <i class="fab fa-whatsapp text-white text-3xl"></i>
+        </a>
+        <div class="absolute bottom-full right-0 mb-2 bg-white rounded-lg shadow-lg p-3 text-sm font-medium text-gray-700 whitespace-nowrap animate-bounce">Contact us on WhatsApp
+            <div class="absolute -bottom-2 right-6 w-4 h-4 bg-white transform rotate-45"></div>
+        </div>
+    </div>
+
+    <!-- Floating Back to Top Button -->
+    <div class="fixed bottom-8 right-28 z-50">
+        <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" class="flex items-center justify-center w-10 h-10 bg-custom rounded-full shadow-lg hover:bg-custom/90 transition-colors float-animation">
+            <i class="fas fa-arrow-up text-white text-xl"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
